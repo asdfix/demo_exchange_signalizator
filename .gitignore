@@ -208,3 +208,6 @@ __marimo__/
 
 venv
 .idea
+.env
+data
+logs
