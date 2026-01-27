@@ -209,5 +209,6 @@ __marimo__/
 venv
 .idea
 .env
+variables.json
 data
 logs

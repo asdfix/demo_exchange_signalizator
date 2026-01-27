@@ -1,5 +1,5 @@
 from airflow import DAG
-from airflow.operators.python import PythonOperator
+from airflow.providers.standard.operators.python import PythonOperator
 from datetime import datetime
 import sys
 import subprocess
@@ -33,7 +33,7 @@ def log_python_env():
 
 with DAG(
     dag_id="log_python_environment",
-    start_date=datetime(2025, 1, 1),
+    start_date=datetime(2026, 1, 1),
     max_active_tasks=None,
     catchup=False,
     tags=["debug", "env"],
