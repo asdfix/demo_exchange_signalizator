@@ -6,7 +6,7 @@ import subprocess
 import logging
 
 
-def log_python_env():
+def log_python_env(**context):
     logger = logging.getLogger("airflow.task")
 
     # Путь к интерпретатору
@@ -23,6 +23,8 @@ def log_python_env():
         text=True,
         check=False,
     )
+
+    logger.info(context)
 
     if result.stdout:
         logger.info("Installed packages:\n%s", result.stdout)
